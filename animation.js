@@ -13,13 +13,13 @@ Scene.start = function () {
 	
 	// Setup the number to be displayed.
     Scene.sprite = number;
-	
+
 	// Attach the image to be used for the sprite.
 	Scene.sprite.img = new Image();
 	Scene.sprite.img.src = Scene.sprite.src;
-	
+
 	// Wait till the number image is loaded before starting the animation.
-	Scene.sprite.img.onload = function() {		
+	Scene.sprite.img.onload = function(){
 		Scene.sprite.offset=Scene.sprite.frames[Scene.sprite.frame].frame.w;
 		Scene.mainLoop();
 	}
