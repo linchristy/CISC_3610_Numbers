@@ -34,18 +34,18 @@ Scene.clearCanvas = function () {
     Scene.canvasContext.fillStyle = "#000000";
     Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);
 };
+
 var counter =0;
 
 Scene.mainLoop = function() {
+
 	if(counter > 10){
 		return;
-	}else if(counter == 10){
+	}else if(counter >= 10){
 		Scene.clearCanvas();
-		Scene.update();
 		Scene.drawTen();
 	}else{
 		Scene.clearCanvas();
-		Scene.update();
 		Scene.draw();
 	}
 
@@ -53,17 +53,19 @@ Scene.mainLoop = function() {
     window.setTimeout(Scene.mainLoop, 500);
 	// Advance to the next frame.
 	Scene.sprite.frame++;
+	// Increment counter
 	counter++;
 	
 };
 
+// draw number 10
 Scene.drawTen = function(){
 	Scene.canvasContext.drawImage(Scene.sprite.img,
 									Scene.sprite.frames[1].frame.x,
 									Scene.sprite.frames[1].frame.y,
 									Scene.sprite.frames[1].frame.w,
 									Scene.sprite.frames[1].frame.h,
-									410,0,
+									0,0,
 									Scene.sprite.frames[1].frame.w,
 									Scene.sprite.frames[1].frame.h);
 	Scene.canvasContext.drawImage(Scene.sprite.img,
@@ -71,22 +73,20 @@ Scene.drawTen = function(){
 									Scene.sprite.frames[0].frame.y,
 									Scene.sprite.frames[0].frame.w,
 									Scene.sprite.frames[0].frame.h,
-									600,0,
+									190,0,
 									Scene.sprite.frames[0].frame.w,
 									Scene.sprite.frames[0].frame.h);
 }
 
-Scene.update = function () {
-	// Set the canvas width to be that of the display Window. Which helps if you resize the window.
-  	Scene.canvas.width = window.innerWidth;
-	
-	// Set the location of the next frame. 
-  	Scene.sprite.offset=631;
-};
-
-
+// draw from 0 to 9
 Scene.draw = function () {
-	Scene.canvasContext.drawImage(Scene.sprite.img,Scene.sprite.frames[Scene.sprite.frame].frame.x,Scene.sprite.frames[Scene.sprite.frame].frame.y,Scene.sprite.frames[Scene.sprite.frame].frame.w,Scene.sprite.frames[Scene.sprite.frame].frame.h,600,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,Scene.sprite.frames[Scene.sprite.frame].frame.h);
+	Scene.canvasContext.drawImage(Scene.sprite.img,
+									Scene.sprite.frames[Scene.sprite.frame].frame.x,
+									Scene.sprite.frames[Scene.sprite.frame].frame.y,
+									Scene.sprite.frames[Scene.sprite.frame].frame.w,
+									Scene.sprite.frames[Scene.sprite.frame].frame.h,
+									85,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,
+									Scene.sprite.frames[Scene.sprite.frame].frame.h);
 };
 
 
