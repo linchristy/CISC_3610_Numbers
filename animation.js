@@ -25,10 +25,12 @@ Scene.start = function () {
 	}
 };
 
-
-
-// Once the basic HTML document is loaded and its parsing has taken place, start the scene.
-document.addEventListener( 'DOMContentLoaded', Scene.start);
+// Once the basic HTML document is loaded and its parsing has taken place,
+// Click the button to start
+document.addEventListener('DOMContentLoaded',()=> {
+	let btn = document.getElementById("button");
+	btn.addEventListener('click',Scene.start);
+});
 
 Scene.clearCanvas = function () {
     Scene.canvasContext.fillStyle = "#000000";
