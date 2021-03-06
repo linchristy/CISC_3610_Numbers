@@ -85,7 +85,7 @@ Scene.draw = function () {
 									Scene.sprite.frames[Scene.sprite.frame].frame.y,
 									Scene.sprite.frames[Scene.sprite.frame].frame.w,
 									Scene.sprite.frames[Scene.sprite.frame].frame.h,
-									85,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,
+									100,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,
 									Scene.sprite.frames[Scene.sprite.frame].frame.h);
 };
 

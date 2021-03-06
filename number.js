@@ -7,22 +7,22 @@ number={
 		{
 			"filename": "tile000.png",
 			"frame": {
-				"x": 1035,
-				"y": 463,
-				"w": 196,
-				"h": 292
+				"x": 1043,
+				"y": 465,
+				"w": 172,
+				"h": 288
 			},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {
-				"x": 1035,
-				"y": 463,
-				"w": 196,
-				"h": 292
+				"x": 1043,
+				"y": 465,
+				"w": 172,
+				"h": 288
 			},
 			"sourceSize": {
-				"w": 196,
-				"h": 292
+				"w": 172,
+				"h": 288
 			}
 		},
 		{
