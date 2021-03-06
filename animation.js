@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded',()=> {
 });
 
 Scene.clearCanvas = function () {
+	// Fill canvas background black
     Scene.canvasContext.fillStyle = "#000000";
     Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);
 };
@@ -44,9 +45,11 @@ Scene.mainLoop = function() {
 	if(counter > 10){
 		return;
 	}else if(counter >= 10){
+		// Clear canvas and draw 10
 		Scene.clearCanvas();
 		Scene.drawTen();
 	}else{
+		// Clear canvas and draw from 0-9
 		Scene.clearCanvas();
 		Scene.draw();
 	}
@@ -60,27 +63,27 @@ Scene.mainLoop = function() {
 	
 };
 
-// draw number 10
+// Draw number 10
 Scene.drawTen = function(){
 	Scene.canvasContext.drawImage(Scene.sprite.img,
-		Scene.sprite.frames[1].frame.x,
-		Scene.sprite.frames[1].frame.y,
-		Scene.sprite.frames[1].frame.w,
-		Scene.sprite.frames[1].frame.h,
-		0,0,
-		Scene.sprite.frames[1].frame.w,
-		Scene.sprite.frames[1].frame.h);
+					Scene.sprite.frames[1].frame.x,
+					Scene.sprite.frames[1].frame.y,
+					Scene.sprite.frames[1].frame.w,
+					Scene.sprite.frames[1].frame.h,
+					0,0,
+					Scene.sprite.frames[1].frame.w,
+					Scene.sprite.frames[1].frame.h);
 	Scene.canvasContext.drawImage(Scene.sprite.img,
-		Scene.sprite.frames[0].frame.x,
-		Scene.sprite.frames[0].frame.y,
-		Scene.sprite.frames[0].frame.w,
-		Scene.sprite.frames[0].frame.h,
-		190,0,
-		Scene.sprite.frames[0].frame.w,
-		Scene.sprite.frames[0].frame.h);
+					Scene.sprite.frames[0].frame.x,
+					Scene.sprite.frames[0].frame.y,
+					Scene.sprite.frames[0].frame.w,
+					Scene.sprite.frames[0].frame.h,
+					190,0,
+					Scene.sprite.frames[0].frame.w,
+					Scene.sprite.frames[0].frame.h);
 }
 
-// draw from 0 to 9
+// Draw from 0 to 9
 Scene.draw = function () {
 	Scene.canvasContext.drawImage(Scene.sprite.img,
 					Scene.sprite.frames[Scene.sprite.frame].frame.x,
