@@ -16,12 +16,12 @@ Scene.start = function () {
 	
 	// Attach the image to be used for the sprite.
 	Scene.sprite.img = new Image();
-    Scene.sprite.img.src = Scene.sprite.src;
+	Scene.sprite.img.src = Scene.sprite.src;
 	
 	// Wait till the number image is loaded before starting the animation.
 	Scene.sprite.img.onload = function() {		
 		Scene.sprite.offset=Scene.sprite.frames[Scene.sprite.frame].frame.w;
-    	Scene.mainLoop();
+		Scene.mainLoop();
 	}
 };
 
@@ -55,12 +55,11 @@ Scene.mainLoop = function() {
 	}
 
 	// Animate at 2 frames a second.
-    window.setTimeout(Scene.mainLoop, 500);
+	window.setTimeout(Scene.mainLoop, 500);
 	// Advance to the next frame.
 	Scene.sprite.frame++;
 	// Increment counter
-	counter++;
-	
+	counter++;	
 };
 
 // Draw number 10
