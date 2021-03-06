@@ -9,7 +9,7 @@ var Scene = {
 Scene.start = function(){
 	// Get the canvas and it's context
 	Scene.canvas = document.getElementById("myCanvas");
-	Scene.canvasContext = Scene.getContext("2d");
+	Scene.canvasContext = Scene.canvas.getContext("2d");
 
 	// Set up the number to be displayed/
 	Scene.sprite = number;
