@@ -11,6 +11,16 @@
     <body>
         <div id="scene" style="text-align:center;">
         <canvas id="myCanvas" width="400" height="330" style="border: 3px double #7fd36e"></canvas><br/>
+        <script>
+            var canvasColor = document.getElementById("myCanvas").getContext("2d");
+            canvasColor.fillStyle="#000000";
+            canvasColor.fillRect(0,0,400,330);
+            canvasColor.fillStyle="#FFFFFF";
+            canvasColor.font="50px Helvetica";
+            canvasColor.fillText("Start Count",70,150);
+            canvasColor.font="30px Helvetica";
+            canvasColor.fillText("0 1 2 3!",150,200);
+        </script>
         <button id="button">Start</button></div>
         <p align="center">
             <a href ="https://linchristy.github.io/CISC3610_MasterLink/">Return to main page</a>
