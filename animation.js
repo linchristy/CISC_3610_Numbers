@@ -34,9 +34,9 @@ Scene.clearCanvas = function () {
     Scene.canvasContext.fillStyle = "#FFFFFF";
     Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);
 };
+var counter =0;
 
 Scene.mainLoop = function() {
-	var counter =0;
 	if(counter > 10){
 		return;
 	}else if(counter == 10){
@@ -63,7 +63,7 @@ Scene.drawTen = function(){
 									Scene.sprite.frames[1].frame.y,
 									Scene.sprite.frames[1].frame.w,
 									Scene.sprite.frames[1].frame.h,
-									20,0,
+									410,0,
 									Scene.sprite.frames[1].frame.w,
 									Scene.sprite.frames[1].frame.h);
 	Scene.canvasContext.drawImage(Scene.sprite.img,
@@ -71,7 +71,7 @@ Scene.drawTen = function(){
 									Scene.sprite.frames[0].frame.y,
 									Scene.sprite.frames[0].frame.w,
 									Scene.sprite.frames[0].frame.h,
-									80,0,
+									600,0,
 									Scene.sprite.frames[0].frame.w,
 									Scene.sprite.frames[0].frame.h);
 }
