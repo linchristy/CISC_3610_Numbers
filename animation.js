@@ -6,13 +6,13 @@ var Scene = {
 	sprite: undefined
 };
 
-Scene.start = function () {
-	// Get the canvas and it's context.
-    Scene.canvas = document.getElementById("myCanvas");
-    Scene.canvasContext = Scene.canvas.getContext("2d");
-	
-	// Setup the number to be displayed.
-    Scene.sprite = number;
+Scene.start = function(){
+	// Get the canvas and it's context
+	Scene.canvas = document.getElementById("myCanvas");
+	Scene.canvasContext = Scene.getContext("2d");
+
+	// Set up the number to be displayed/
+	Scene.sprite = number;
 
 	// Attach the image to be used for the sprite.
 	Scene.sprite.img = new Image();
