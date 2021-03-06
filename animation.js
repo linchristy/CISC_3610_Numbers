@@ -31,7 +31,7 @@ Scene.start = function () {
 document.addEventListener( 'DOMContentLoaded', Scene.start);
 
 Scene.clearCanvas = function () {
-    Scene.canvasContext.fillStyle = "#FFFFFF";
+    Scene.canvasContext.fillStyle = "#000000";
     Scene.canvasContext.fillRect(0, 0, Scene.canvas.width, Scene.canvas.height);
 };
 var counter =0;
