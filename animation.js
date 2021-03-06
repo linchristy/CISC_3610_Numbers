@@ -1,8 +1,8 @@
 "use strict";
 
-var Scene = {
-    canvas : undefined,
-    canvasContext : undefined,
+var  Scene = {
+	canvas : undefined,
+	canvasContext : undefined,
 	sprite: undefined
 };
 
