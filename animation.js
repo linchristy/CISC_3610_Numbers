@@ -83,12 +83,12 @@ Scene.drawTen = function(){
 // draw from 0 to 9
 Scene.draw = function () {
 	Scene.canvasContext.drawImage(Scene.sprite.img,
-							Scene.sprite.frames[Scene.sprite.frame].frame.x,
-							Scene.sprite.frames[Scene.sprite.frame].frame.y,
-							Scene.sprite.frames[Scene.sprite.frame].frame.w,
-							Scene.sprite.frames[Scene.sprite.frame].frame.h,
-							100,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,
-							Scene.sprite.frames[Scene.sprite.frame].frame.h);
+						Scene.sprite.frames[Scene.sprite.frame].frame.x,
+						Scene.sprite.frames[Scene.sprite.frame].frame.y,
+						Scene.sprite.frames[Scene.sprite.frame].frame.w,
+						Scene.sprite.frames[Scene.sprite.frame].frame.h,
+						100,0,Scene.sprite.frames[Scene.sprite.frame].frame.w,
+						Scene.sprite.frames[Scene.sprite.frame].frame.h);
 };
 
 
